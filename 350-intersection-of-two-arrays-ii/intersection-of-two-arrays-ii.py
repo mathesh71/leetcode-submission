@@ -1,6 +1,8 @@
 class Solution:
     def intersect(self, nums1, nums2):
         freq = {}
+        if len(nums1) > len(nums2):
+            nums1, nums2 = nums2, nums1
         
         for num in nums1:
             freq[num] = freq.get(num, 0) + 1
